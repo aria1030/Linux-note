@@ -71,7 +71,9 @@ linux学习过程中的心得、总结
     -t           unrequired
     -c           changlog
    
-   
+   find ~ -name python.py -a -size 10k -o -mtime -7 -not -perm 755 -o -user aria -a -type f
+   find / -size 100M -ok rm -rf {} \;         #需要询问才执行
+   find / -name *.bac -exec rm -rf {} \;      #直接执行
     
     
   
