@@ -1,14 +1,15 @@
-# linux-
-linux学习过程中的心得、总结
+# linux学习心得、总结
 
 ##软件包安装管理
-1、源码
-  位置
-    /usr/src内核源代码
-    /usr/local用户下载得源代码，如/usr/local/pycharm
-  解包
-    tar -zxvf pycharm.tar.gz  -C /usr/local
-    tar -jxvf pycharm.tar.bz2 -C /usr/local
+###1、源码
+    位置
+      >/usr/src内核源代码
+      >/usr/local用户下载得源代码，如/usr/local/pycharm
+      
+    解包
+      >tar -zxvf pycharm.tar.gz  -C /usr/local
+      >tar -jxvf pycharm.tar.bz2 -C /usr/local
+      
   安装源码软件
     ./configure --prefix=/usr/local/pycharm   #软件配置，可以看帮助文件 ./configure --help |more
     make  #编译
