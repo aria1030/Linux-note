@@ -29,14 +29,17 @@
    **然后 make、mke install**
       
    **取消升级**
+   
     patch -R < diff.patch
       
    **源码包卸载**
+   
     rm -rf /usr/local/pycharm
     
 ## 2、包管理器 pacman、yay
 
   **常用**
+  
     -Syyu       强制升级系统，需要root权限
     -S          安装、升级软件包、包组(包含大量软件，可选择序号安装，^表示非，如^2，不安装第2个软件)，需要root权限
     -Rsn        卸载软件并清楚不需要的依赖，需要root权限
@@ -86,6 +89,8 @@
     -d           dependent
     -t           unrequired
     -c           changlog
+   
+   **find**
    
      find ~ -name python.py -a -size 10k -o -mtime -7 -not -perm 755 -o -user aria -a -type f
      find / -size 100M -ok rm -rf {} \;         #需要询问才执行
