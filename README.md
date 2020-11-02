@@ -27,6 +27,7 @@
       > rm -rf /usr/local/pycharm
     
 ## 2、包管理器 pacman、yay
+
   **常用**
     -Syyu       强制升级系统，需要root权限
     -S          安装、升级软件包、包组(包含大量软件，可选择序号安装，^表示非，如^2，不安装第2个软件)，需要root权限
@@ -53,7 +54,9 @@
     
    pactree     依赖树
     -r         一个安装的软件包被那些包依赖   
+    
   **参数**
+  
    -S           sync同步
    -R           remove删除
    -Q           query查询
@@ -64,6 +67,7 @@
     -c           clean
        
    **-Q的参数**
+   
     -y           refresh
     -k           check
     -o           owner
