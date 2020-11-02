@@ -1,30 +1,33 @@
 # linux学习心得、总结
 
-##软件包安装管理
-###1、源码
-    位置
-      >/usr/src内核源代码
-      >/usr/local用户下载得源代码，如/usr/local/pycharm
+## 软件包安装管理
+### 1、源码
+    **位置**
+      > /usr/src内核源代码
+      > /usr/local用户下载得源代码，如/usr/local/pycharm
       
-    解包
-      >tar -zxvf pycharm.tar.gz  -C /usr/local
-      >tar -jxvf pycharm.tar.bz2 -C /usr/local
+    **解包**
+      > tar -zxvf pycharm.tar.gz  -C /usr/local
+      > tar -jxvf pycharm.tar.bz2 -C /usr/local
       
-  安装源码软件
-    ./configure --prefix=/usr/local/pycharm   #软件配置，可以看帮助文件 ./configure --help |more
-    make  #编译
-    make install  #安装
-   升级
-    diff -Naur /usr/local/pycharm/old.file /下载/pycharm/new.file >diff.patch
-    patch -pn < diff.patch  #-pn用来同步两个目录，补丁文件记录得目录中取消几个/，n就是几，此例为2,取消了“/”及"/下载“两个文件夹，依赖补丁文件，其中记录了文件所在；简单点直接将补丁文件复制到需要打补丁的文件夹中，n取0.
-    然后 make、mke install
-   取消升级
-    patch -R < diff.patch
-   源码包卸载
-    rm -rf /usr/local/pycharm
+    **安装源码软件**
+      >./configure --prefix=/usr/local/pycharm   #软件配置，可以看帮助文件 ./configure --help |more
+      > make  #编译
+      > make install  #安装
+      
+     **升级**
+      > diff -Naur /usr/local/pycharm/old.file /下载/pycharm/new.file >diff.patch
+      > patch -pn < diff.patch  
+      > #-pn用来同步两个目录，补丁文件记录得目录中取消几个/，n就是几，此例为2,取消了“/”及"/下载“两个文件夹，依赖补丁文件，其中记录了文件所在；简单点直接将补丁文件复制到需要打补丁的文件夹中，n取0.
+      然后 make、mke install
+      
+     **取消升级**
+      > patch -R < diff.patch
+     **源码包卸载*
+      > rm -rf /usr/local/pycharm
     
-2、包管理器 pacman、yay
-  常用
+## 2、包管理器 pacman、yay
+  **常用**
     -Syyu       强制升级系统，需要root权限
     -S          安装、升级软件包、包组(包含大量软件，可选择序号安装，^表示非，如^2，不安装第2个软件)，需要root权限
     -Rsn        卸载软件并清楚不需要的依赖，需要root权限
@@ -50,7 +53,7 @@
     
    pactree     依赖树
     -r         一个安装的软件包被那些包依赖   
-  参数
+  **参数**
    -S           sync同步
    -R           remove删除
    -Q           query查询
@@ -60,7 +63,7 @@
    -Fy          同步文件数据库
     -c           clean
        
-   -Q的参数
+   **-Q的参数**
     -y           refresh
     -k           check
     -o           owner
@@ -72,9 +75,9 @@
     -t           unrequired
     -c           changlog
    
-   find ~ -name python.py -a -size 10k -o -mtime -7 -not -perm 755 -o -user aria -a -type f
-   find / -size 100M -ok rm -rf {} \;         #需要询问才执行
-   find / -name *.bac -exec rm -rf {} \;      #直接执行
+   > find ~ -name python.py -a -size 10k -o -mtime -7 -not -perm 755 -o -user aria -a -type f
+   > find / -size 100M -ok rm -rf {} \;         #需要询问才执行
+   > find / -name *.bac -exec rm -rf {} \;      #直接执行
     
     
   
