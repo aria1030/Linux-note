@@ -4,10 +4,12 @@
 ### 1、源码
 
    **位置**
+   
    > /usr/src内核源代码
    > /usr/local用户下载得源代码，如/usr/local/pycharm
       
    **解包**
+   
    > tar -zxvf pycharm.tar.gz  -C /usr/local
    > tar -jxvf pycharm.tar.bz2 -C /usr/local
       
@@ -30,7 +32,7 @@
      
    > patch -R < diff.patch
       
-   **源码包卸载*
+   **源码包卸载**
      
    > rm -rf /usr/local/pycharm
     
