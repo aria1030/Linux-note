@@ -3,37 +3,36 @@
 ## 软件包安装管理
 ### 1、源码
 
-    **位置**
+   **位置**
+   > /usr/src内核源代码
+   > /usr/local用户下载得源代码，如/usr/local/pycharm
+      
+   **解包**
+    > tar -zxvf pycharm.tar.gz  -C /usr/local
+    > tar -jxvf pycharm.tar.bz2 -C /usr/local
+      
+   **安装源码软件**
     
-      > /usr/src内核源代码
-      > /usr/local用户下载得源代码，如/usr/local/pycharm
+   >./configure --prefix=/usr/local/pycharm   #软件配置，可以看帮助文件 ./configure --help |more
+   > make  #编译
+   > make install  #安装
       
-    **解包**
-    
-      > tar -zxvf pycharm.tar.gz  -C /usr/local
-      > tar -jxvf pycharm.tar.bz2 -C /usr/local
-      
-    **安装源码软件**
-    
-      >./configure --prefix=/usr/local/pycharm   #软件配置，可以看帮助文件 ./configure --help |more
-      > make  #编译
-      > make install  #安装
-      
-     **升级**
+   **升级**
      
-      > diff -Naur /usr/local/pycharm/old.file /下载/pycharm/new.file >diff.patch
-      > patch -pn < diff.patch  
-      > -pn用来同步两个目录，补丁文件记录得目录中取消几个/，n就是几，此例为2,取消了“/”及"/下载“两个文件夹，依赖补丁文件，其中记录了文件所在；
-      > 简单点直接将补丁文件复制到需要打补丁的文件夹中，n取0.
-      然后 make、mke install
+   > diff -Naur /usr/local/pycharm/old.file /下载/pycharm/new.file >diff.patch
+   > patch -pn < diff.patch  
+   > -pn用来同步两个目录，补丁文件记录得目录中取消几个/，n就是几，此例为2,取消了“/”及"/下载“两个文件夹，依赖补丁文件，其中记录了文件所在；
+   > 简单点直接将补丁文件复制到需要打补丁的文件夹中，n取0.
+   
+   **然后 make、mke install**
       
-     **取消升级**
+   **取消升级**
      
-      > patch -R < diff.patch
+   > patch -R < diff.patch
       
-     **源码包卸载*
+   **源码包卸载*
      
-      > rm -rf /usr/local/pycharm
+   > rm -rf /usr/local/pycharm
     
 ## 2、包管理器 pacman、yay
 
