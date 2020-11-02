@@ -8,12 +8,12 @@
    > /usr/local用户下载得源代码，如/usr/local/pycharm
       
    **解包**
-    > tar -zxvf pycharm.tar.gz  -C /usr/local
-    > tar -jxvf pycharm.tar.bz2 -C /usr/local
+   > tar -zxvf pycharm.tar.gz  -C /usr/local
+   > tar -jxvf pycharm.tar.bz2 -C /usr/local
       
    **安装源码软件**
     
-   >./configure --prefix=/usr/local/pycharm   #软件配置，可以看帮助文件 ./configure --help |more
+   > ./configure --prefix=/usr/local/pycharm   #软件配置，可以看帮助文件 ./configure --help |more
    > make  #编译
    > make install  #安装
       
