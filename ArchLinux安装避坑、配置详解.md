@@ -411,31 +411,45 @@ Windows的字体就被安装到linux里了。
 美化去设置里找，慢慢搞，这个很简单。
 软件，首先要知道几个pacman命令：
 
-•	查找软件pacman -Ss
-•	安装pacman -S
-•	卸载pacman -R
-•	更新源pacman -Sy
-•	更新系统pacman -Syu
-•	全面更新系统pacman -Syyu
-•	移除无用包pacman -Sc
-•	查找已安装的包pacman -Q
-•	删除软件及依赖pacman -Rsn
+	安装pacman -S
+	删除软件及依赖pacman -Rsn
+	卸载pacman -R
+	更新源pacman -Sy
+	更新系统pacman -Syu
+	全面更新系统pacman -Syyu
+	移除无用包pacman -Sc
+	查找已安装的包pacman -Q
+	查找软件pacman -Ss
 
 好，可以开始安装了。以下均为S后填的内容，建议将sudo pacman改为yay，例：yay -S firefox。
 
 浏览器 
+
 	firefox或google-chrome
+	
 文字编辑 
+
 	wps-office-cn wps-office-mui-zh-cn ttf-wps-fonts（三个都要，不然只有英文版的wps，默认是组件分开显示的，要去wps里设置成整合模式）
+	
 音乐 
+
 	netease-cloud-music
+	
 视频 
+
 	VLC（自带）
+	
 微信 
+
 	先yay装deepin-wine，然后装wechat，在前面都弄好了应该不会蹦出英文版的微信出来
+	
 QQ 
+
 	deepin-qq-eim（企业版QQ，我没成功打开，怪怪用手机QQ吧） qq-linux（这个08画风，还得扫码登录的假QQ）
+	
 python
+
 	pycharm pycharm-community-jre
+	
 最后，部署完工！
 
